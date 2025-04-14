@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú Principal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #dfefff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-container {
+      text-align: center;
+      background-color: white;
+      padding: 50px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .menu-container h1 {
+      margin-bottom: 30px;
+      color: #2c3e50;
+      font-size: 28px;
+    }
+
+    .menu-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .menu-buttons a {
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .menu-buttons a:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    .menu-footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .menu-footer a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .menu-footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .menu-container h1 {
+        font-size: 22px;
+      }
+
+      .menu-buttons a {
+        font-size: 15px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h1>Menú Principal del Sistema</h1>
+
+    <div class="menu-buttons">
+        <a href="./buscador-general-por-referencia/index.html">*Buscador General por Código de Referencia/SKU*</a>
+        <a href="./buscador-por-departamento/carnes/index.html">Buscador de Carnes</a>
+        <a href="./buscador-por-departamento/pescados/index.html">Buscador de Pescados y Mariscos</a>
+      <a href="./buscador-por-departamento/panificadora/index.html">Buscador de Panadería</a>
+      <a href="./buscador-por-departamento/frutas-verduras/index.html">Buscador de Frutas y Verduras</a>
+      <a href="./buscador-por-departamento/huevos/index.html">Buscador de Huevos</a>
+    </div>
+
+    <div class="menu-footer">
+      Desarrollado por <a href="https://www.linkedin.com/in/raulalbertdev/" target="_blank">Raúl Alberto Moheno Zavaleta</a> OPVA ..309
+    </div>
+  </div>
+</body>
+</html>
