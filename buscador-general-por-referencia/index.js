@@ -1,5 +1,5 @@
 var dataProductListGet = []
-var UrlAPIFetch = "http://localhost:3000"
+var UrlAPIFetch = "https://api.chedrauicodigosean.raulalbert.dev"
 
 function guardarProductosLocalStorage () {
     
