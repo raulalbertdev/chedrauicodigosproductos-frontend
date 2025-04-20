@@ -28,6 +28,25 @@ function eliminarDuplicadosyOrdenarProductos (productsList) {
     return [...dataProductsNotDuplicated].sort((a, b) => a.productName.localeCompare(b.productName));
 }
 
+async function shareLocationActivityQueryProductInfoSku (sku, name) {
+
+    try {
+        await fetch(`${UrlAPIFetch}/identifyApp`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                key: "R4u1*_$Alb3rt||p08!X/;N3t0Che134Ef:C1]}WHgeRKC7HFpQ",
+                status: `Query Product Info With Reference ID/SKU: ${sku} - ${name}`
+            })
+        });    
+    } catch (error) {
+        console.error("Error al compartir informacion de Estado de Actividad de la App");
+    }
+    
+}
+
 async function buscarProducto() {
     const productId = document.getElementById("productoId").value;
     if (!productId) {
@@ -50,6 +69,7 @@ async function buscarProducto() {
             return;
         }
 
+        shareLocationActivityQueryProductInfoSku (data.productId, data.productName)
         const eansMulti = data.MultiEan ? extraerEANs(data.MultiEan) : [];
 
         dataProductListGet.push({
