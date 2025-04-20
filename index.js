@@ -1,5 +1,5 @@
 const loadApp = async ()  => {
-    await fetch("https://api.chedrauicodigosean.raulalbert.dev/identifyApp", {
+    await fetch("https://api.chedrauicodigosean.raulalbert.dev/registerActivityApp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

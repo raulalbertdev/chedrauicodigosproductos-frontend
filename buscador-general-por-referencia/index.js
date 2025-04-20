@@ -31,7 +31,7 @@ function eliminarDuplicadosyOrdenarProductos (productsList) {
 async function shareLocationActivityQueryProductInfoSku (sku, name) {
 
     try {
-        await fetch(`${UrlAPIFetch}/identifyApp`, {
+        await fetch(`${UrlAPIFetch}/registerActivityApp`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
