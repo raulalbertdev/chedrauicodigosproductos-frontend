@@ -65,7 +65,8 @@ async function buscarProducto() {
             document.getElementById("resultado").innerHTML = `
                 <div class="error-message">${data.error}</div>
             `;
-            console.log(data.error)
+            console.log(data?.error, "No se puede consultar información de un producto que no existe")
+            shareActivityApp ("Intento fallido de intentar consultar un producto con código SKU " + productId)
             return;
         }
 

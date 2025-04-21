@@ -1,4 +1,4 @@
-const loadApp = async (statusActivity)  => {
+const shareActivityApp = async (statusActivity)  => {
     await fetch("https://api.chedrauicodigosean.raulalbert.dev/registerActivityApp", {
       method: "POST",
       headers: {
