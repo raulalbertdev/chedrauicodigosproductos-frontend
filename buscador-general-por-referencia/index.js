@@ -61,7 +61,7 @@ async function buscarProducto() {
         const dataResponse = await response.json();
         const data = dataResponse[0]
 
-        if (data.error) {
+        if (data == []) {
             document.getElementById("resultado").innerHTML = `
                 <div class="error-message">${data.error}</div>
             `;
