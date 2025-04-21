@@ -63,7 +63,7 @@ async function buscarProducto() {
 
         console.log(data)
 
-        if (data == []) {
+        if (!data) {
             document.getElementById("resultado").innerHTML = `
                 <div class="error-message">${data.error}</div>
             `;
