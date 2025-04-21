@@ -67,7 +67,7 @@ async function buscarProducto() {
             document.getElementById("resultado").innerHTML = `
                 <div class="error-message">Error al consultar el producto.</div>
             `;
-            console.error("No se puede consultar información del producto con el código de referencia" + productId)
+            console.error("No se puede consultar información del producto con el código de referencia", productId)
             shareActivityApp ("Intento fallido de intentar consultar un producto con código SKU " + productId)
             return;
         }
